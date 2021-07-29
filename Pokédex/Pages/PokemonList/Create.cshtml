@@ -1,0 +1,74 @@
+﻿@page
+@model Pokédex.Pages.PokemonList.CreateModel
+@{
+    ViewData["Title"] = "Create Pokemon";
+}
+
+<div class="bg-light mt-2">
+    <h2 class="text-info"> @ViewData["Title"]</h2>
+</div>
+<div class="border container">
+    <form enctype="multipart/form-data" method="post" class="mt-3">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <label asp-for="Pokemon.Name" class="col-md-3 col-form-label"></label>
+            <div class="col-sm-6">
+                <input type="text" asp-for="Pokemon.Name" class="form-control" />
+            </div>
+            <span asp-validation-for="Pokemon.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Pokemon.Gender" class="col-md-3 col-form-label"></label>
+            <div class="col-sm-6">
+                <select name="Gender" asp-for="Pokemon.Gender" asp-items="Model.GenderList" class="form-control">
+                    <option value="Please select a gender"></option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Pokemon.Heigth" class="col-md-3 col-form-label"></label>
+            <div class="col-sm-3">
+                <input type="number" asp-for="Pokemon.Heigth" class="form-control" />
+            </div>
+            <label class="col-md-3 col-form-label"> m</label>
+            <span asp-validation-for="Pokemon.Heigth" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Pokemon.Weight" class="col-md-3 col-form-label"></label>
+            <div class="col-sm-3">
+                <input type="number" asp-for="Pokemon.Weight" class="form-control" />
+            </div>
+            <label class="col-md-3 col-form-label"> Kg</label>
+            <span asp-validation-for="Pokemon.Weight" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Pokemon.Type" class="col-md-3 col-form-label"></label>
+            <div class="col-sm-6">
+                <input type="text" asp-for="Pokemon.Type" class="form-control" />
+            </div>
+            <span asp-validation-for="Pokemon.Type" class="text-danger"></span>
+        </div>
+        <div class="from-group row mb-3">
+            <label asp-for="Pokemon.ImagePath" class="col-md-3 col-form-label"></label>
+            <div class="col-sm-6">
+                <input asp-for="Pokemon.ImageFormFile" class="form-control" />
+            </div>
+        </div>
+
+        <div class="from-group row mb-3">
+            <div class="col-2 offset-3">
+                <input type="submit"
+                       value="Create"
+                       class="btn btn-primary form-control" />
+            </div>
+            <div class="col-2">
+                <a asp-page="Index" class="btn btn-outline-dark form-control"> Back to list</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

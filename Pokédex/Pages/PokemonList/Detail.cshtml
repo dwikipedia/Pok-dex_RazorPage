@@ -1,0 +1,46 @@
+﻿@page
+@model Pokédex.Pages.PokemonList.DetailModel
+@{
+    ViewData["Title"] = Model.Pokemon.Name;
+    var image = "~/images/" + (Model.Pokemon.ImagePath ?? "not-found.png");
+}
+
+<div class="bg-light mt-2">
+    <h2 class="text-info"> @ViewData["Title"]</h2>
+</div>
+<div class="border container">
+    <input type="hidden" asp-for="Pokemon.PokemonId" />
+
+    <div class="from-group text-center mt-2">
+        <img src="@image"
+             class="rounded bg-light border"
+             height="180"
+             asp-append-version="true"
+             alt="@Model.Pokemon.Name" />
+    </div>
+    <div class="d-flex justify-content-center mt-3 mb-3">
+        <div class="bg-dark text-white rounded col-md-7">
+            <div class="form-group text-center">
+                <label asp-for="Pokemon.Gender" class="col-md-3 col-form-label"></label>
+                <label class="col-form-label col-md-3">@Model.Pokemon.Gender</label>
+            </div>
+            <div class="form-group text-center">
+                <label asp-for="Pokemon.Heigth" class="col-md-3 col-form-label"></label>
+                <label class="col-md-3 col-form-label"> @Model.Pokemon.Heigth m</label>
+            </div>
+            <div class="form-group text-center">
+                <label asp-for="Pokemon.Weight" class="col-md-3 col-form-label"></label>
+                <label class="col-md-3 col-form-label">@Model.Pokemon.Weight Kg</label>
+            </div>
+            <div class="form-group text-center">
+                <label asp-for="Pokemon.Type" class="col-md-3 col-form-label"></label>
+                <label class="col-form-label col-md-3">@Model.Pokemon.Type</label>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="from-group text-center mb-2">
+        <a asp-page="Index" class="btn btn-outline-dark form-control col-md-3"> Back to list</a>
+    </div>
+</div>

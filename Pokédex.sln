@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokédex", "Pokédex\Pokédex.csproj", "{FFDE656B-E7BF-4AEC-A64C-957FB75CD104}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Entities\Model.csproj", "{0131C737-B07F-4F8B-BA74-FBFE0C870C84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppContext", "AppContext\AppContext.csproj", "{B1372AFA-4BBE-4A78-97F5-8761D39BDF38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFDE656B-E7BF-4AEC-A64C-957FB75CD104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFDE656B-E7BF-4AEC-A64C-957FB75CD104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFDE656B-E7BF-4AEC-A64C-957FB75CD104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFDE656B-E7BF-4AEC-A64C-957FB75CD104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0131C737-B07F-4F8B-BA74-FBFE0C870C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0131C737-B07F-4F8B-BA74-FBFE0C870C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0131C737-B07F-4F8B-BA74-FBFE0C870C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0131C737-B07F-4F8B-BA74-FBFE0C870C84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1372AFA-4BBE-4A78-97F5-8761D39BDF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1372AFA-4BBE-4A78-97F5-8761D39BDF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1372AFA-4BBE-4A78-97F5-8761D39BDF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1372AFA-4BBE-4A78-97F5-8761D39BDF38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F26E246C-8176-4DD9-A87D-E28E224A4730}
+	EndGlobalSection
+EndGlobal
